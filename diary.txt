@@ -1,0 +1,184 @@
+===============================
+DAY 1 - 11 June 2026
+Project Foundry - Python Basics
+===============================
+
+1. PRINT
+-------------------------------------------------------------------
+
+Kya hai:
+    Screen pe kuch bhi dikhata hai.
+
+
+Kaise:
+    print("Hello")
+    print(f"Name: {naem}")     <-  f-string professional way hai 
+
+
+Kyu:
+    Output dekhne ke liye, debugging ke liye.
+
+
+2. VARIABLES
+-------------------------------------------------------------------
+
+Kya hai:
+    Data store karne ka named box.
+
+
+Kaise:
+    name = "Aditya"
+    age = 18
+
+
+Important:
+    Overwrite ho sakta hai - name = "Rahul"  likhne se 
+    purana value chala jaata hai.
+
+
+Kyu:
+    Ek jagah store, poore code mein use karo.
+
+
+3. DATA TYPES 
+-------------------------------------------------------------------
+
+4 types:
+    str   ->  "Aditya"     text
+    int   ->  18           whole number
+    float ->  5.9          decimal
+    bool  ->  True/False   yes or no 
+
+
+Check kaise karein:
+    print(type(name))    ->  <class 'str'>
+
+
+4. MATH OPERATIONS
+-------------------------------------------------------------------
+
++  addition       10 +  3 = 13
+-  subtraction    10 -  3 = 7
+*  multiply       10 *  3 = 30
+/  division       10 /  3 = 3.333
+// floor div      10 // 3 = 3 (decimal hata do)
+%  remainder      10 %  3 = 1 (bacha hua)
+
+
+5. USER INPUT
+-------------------------------------------------------------------
+
+Kya hai:
+    User se live data lena - program ruk jaata hai.
+
+
+Kaise:
+    name = input("Enter name: ")
+
+
+Important:
+    input() hamesha STRING deta hai.
+    Number chahiye toh: age = int(input("Enter age: "))
+
+
+6. COMMENTS
+-------------------------------------------------------------------
+
+Kya hai:
+    # se shuru hone wali line Python run nahi karta.
+    Srif programmer ke liye - explanation ke liye.
+
+
+Kaise:
+    # yeh comment hai 
+    name = "Aditya"     # inline comment
+
+
+7. IF / ELIF / ELSE
+-------------------------------------------------------------------
+
+Kya hai:
+    Condition check karna - agar yeh toh yeh, warna woh.
+
+
+Kaise:
+    if marks >= 90:
+        print("Grade A")
+    elif marks >= 75:
+        print("Grade B")
+    else:
+        print("Fail")
+
+
+Important:
+     Indentation mandatory hai - 4 spaces.
+     Bina indentation ke error aata hai.
+
+
+8. FOR LOOP
+-------------------------------------------------------------------
+
+Kya hai:
+    Ek kaam baar baar karna - bina repeat likhe.
+
+
+Kaise:
+    for i in range(5):          <- 0,1,2,3,4
+        print(i)
+
+    for i in range(1, 6):       <- 1,2,3,4,5
+        print(i)
+
+
+Kyu;
+    2 lines mein 5 ka table, 100 numbers - sab loop se.
+
+
+9. LISTS
+-------------------------------------------------------------------
+
+Kya hai:
+    Ek variable mein multiple values store karna.
+
+
+Kaise:
+    stock = ["Apple", "Google", "Tesla"]
+    print(stocks[0])           <- Apple  (0 se shuru hota hai)
+    print(stocks[2])           <- Tesla
+    print(len(stocks))         <- 3 (total items)
+
+
+Loop se list:
+     for stock in stocks;
+         print(stock)
+
+
+Kyu:
+    Real data hamesha list mein hota hai -
+    stocks, prices, names - sab list.
+
+
+================================================
+TOOLS SETUP
+================================================
+Python  : 3.12.9  on windows
+Editor  : Sublime Text - Ctrl+B se run
+Git     : 2.54
+GitHub  : adityamohalkar51/aditya-foundry
+Folder  : D:\Foundry\
+
+
+================================================
+DAY 1 SUMMARY
+================================================
+Zero se shuru karke aaj yeh sab kiya:
+- Terminal samjha
+- Python install verify kiya
+- 9 concepts hands-on kiye
+- Har concept predict karke verify kiya
+-GitHub pe first commit push ki
+-Sublime Text setup kiya
+
+
+Next Day 2: Functions, while loop, dictionaries
+================================================

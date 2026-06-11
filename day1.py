@@ -1,3 +1,8 @@
-print("Hello, Foundry!")
-print("My name is Aditya.")
-print("Day 1 begins now.")
+stocks = ['Apple', 'Googel', 'Tesla', 'Microsoft']
+
+print(stocks[0])
+print(stocks[2])
+print(len(stocks))
+
+for stock in stocks:
+	print(f"Stock: {stock}")
