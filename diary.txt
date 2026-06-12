@@ -182,3 +182,212 @@ Zero se shuru karke aaj yeh sab kiya:
 
 Next Day 2: Functions, while loop, dictionaries
 ================================================
+
+
+===============================
+DAY 2 - 12 June 2026
+===============================
+
+1. WHILE LOOP
+-------------------------------------------------------------------
+
+Kya hai:
+    for loop fixed cound tak chalta hai.
+    while loop CONDITION tak chalta hai - jab tak True hai.
+
+Kaise:
+    count = 1
+    while count <= 5:
+        print(f"count is {count}")
+        count = count + 1
+
+Important:
+    Counter manually update karna padta hai (count = count + 1)
+    Warna infinite loop ban jaayega - kabhi rukega nahi.
+
+2. FUNCTIONS (def)
+-------------------------------------------------------------------
+
+Kya hai:
+    Reusable block of code. Naam do, jab chaho call karo.
+
+Kaise:
+    def greet(name):
+        print(f"Hello, {name}")
+
+    greet("Aditya")
+
+Kyu:
+    Same kaam baar baar likhna nahi padta.
+    Code clean aur organized rehta hai.
+
+3. FUNCTION WITH RETURN
+-------------------------------------------------------------------
+
+Kya hai:
+    print() sirf dikhata hai.
+    return value deta hai jo store/use kar sakte hain.
+
+Kaise:
+    def add_numbers(a, b):
+        return a + b
+
+    result = add_numbers(10, 5)
+    print(result)        -> 15
+
+4. DICTIONARIES
+-------------------------------------------------------------------
+
+Kya hai:
+    List mein number se access karte hain (stock[0]).
+    Dictionary mein NAAM se access karte hain (key-value pairs).
+
+Kaise:
+    student = {"name": "Aditya", "age": 18, "city": "Beed"}
+    print(student["name"])      -> Aditya
+
+Kyu:
+    Finance mein: stock_data = {"price": 150, "volume": 1000}
+
+5. TYPE CONVERSION
+-------------------------------------------------------------------
+
+Kya hai:
+    input() hamesha STRING deta hai.
+    Math karne ke liye number mein convert karna padta hai.
+
+Kaise:
+    num_str = "100"
+    num_int = int(num_str)
+    print(num_int + 50)   -> 150
+
+Functions: int(), float(), str()
+
+6. MINI PROJECT - CALCULATOR
+-------------------------------------------------------------------
+
+Kya hai:
+    Function + if/elif/else + parameters - sab combine.
+
+Kaise:
+    def calculator(num1, num2, operation):
+        if operation == "add":
+            return num1 + num2
+        elif operation == "subtract":
+            return num1 - num2
+        elif operation == "multiply":
+            return num1 * num2
+        elif operation == "divide":
+            return num1 / num2
+        else:
+            return "Invalid operation"
+
+Important:
+    Division (/) hamesha FLOAT deta hai - 10/5 = 2.0, not 2.
+
+7. STRING METHODS
+-------------------------------------------------------------------
+
+Kya hai:
+    String pe .method_name() lagate hain.
+
+Methods:
+    .upper()   - sab CAPITAL
+    .lower()   - sab small
+    .strip()   - aage-peeche extra space hatao
+    .replace("X","Y") - X ko Y se badlo 
+    len()      - total characters count
+
+Kaise:
+    name = "  Aditya  "
+    print(name.upper())   ->  "  ADITYA  "
+    print(name.strip())   ->  "Aditya"
+
+8. LIST METHODS
+-------------------------------------------------------------------
+
+Kya hai:
+    List ko modify karne ke methods.
+
+Methods:
+    .append(X)  - end mein item add karo
+    .remore(X)  - specific item hatao
+    max()       - sabse bada
+    min()       - sabse chota
+    sum()       - total
+
+Kaise:
+    prices = [100, 250, 80, 320]
+    prices.append(500)     -> [100, 250, 80, 320, 500]
+    prices.remove(80)      -> [100, 250, 320, 500]
+    print(max(prices))     -> 500
+    print(sum(prices))     -> 1170
+
+9. LIST OF DICTIONARIES
+-------------------------------------------------------------------
+
+Kya hai:
+    Real-world data structure - list ke andar dictionaries.
+    Exactly aise hi financial data store hota hai.
+
+Kaise:
+    portfolio = [
+    {"stock": "Apple", "price": 180, "qty": 10},
+    {"stock": "Tesla", "price": 250, "qty": 5}
+]
+
+for item in portfolio:
+    total = item["price"] * item["qty"]
+    print(f"{item['stock']}: {total}")
+
+Kyu:
+   Yeh structure stocks, transactions, users - sab jagah hota hai.
+
+10. ACCUMULATOR PATTERN (Total Portfolio value)
+-------------------------------------------------------------------
+
+Kya hai:
+   Loop chalate huye ek variable mein values jodte jaana.
+
+Kaise:
+   total_value = 0         <- starting point, empty box 
+
+   for item in portfolio:
+       value = item["price"] * item["qty"]
+       total_value = total_value + value  <-    har round mein update
+
+    print(total_value)
+
+Important:
+    total_value = 0 sirf Ek BAAR set hota hai.
+    Har loop round mein total_value OVERWRITE hota hai 
+    naye (purana + naya) value se.
+    Round 1: 0 + 1800 = 1800
+    Round 2: 1800 + 1250 = 3050
+    Round 3: 3050 + 1120 = 4170
+
+Kyu:
+    Total sum, total count, total marks - sab isi pattern se. 
+    Yeh programming ka sabse common pattern hai.
+
+
+================================================
+DAY 2 SUMMARY
+================================================
+Aaj yeh sab seekha - 10 concepts:
+- while loop - condition based repetition
+- functions - reusable code, def keyword
+- return - function se value wapas lena 
+- dictionaries - key-value data storage
+- type conversion - int(), float(), str()
+- mini calculator project 
+- string methods - upper, lower, strip, replace
+- list methods - append, remove, max, min, sum
+- list of dictionaries - real financial data structure 
+- accumulator pattern - total portfolio value calculator
+
+Files:
+- day2.py - saare 10 concepts, ek file mein
+
+Next Day 3: Lists deep dive (slicing, sorting),
+nested loops, file handling basics
